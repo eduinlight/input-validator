@@ -3,7 +3,7 @@
 ![npm type definitions](https://img.shields.io/npm/types/@eduinlight/input-validator?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@eduinlight/input-validator?style=flat-square)
 
-This library was writed over [validator](https://www.npmjs.com/package/validator). The main reason why this library come up was form simplicity on input validations.
+This library was writed over [validator](https://www.npmjs.com/package/validator). The main reason why this library come up was for simplicity on input validations.
 
 ## Usage
 
