@@ -6,16 +6,7 @@ describe('test rules functions', () => {
       expect(rules.equals('cuba', 'cuba')).toBe(true)
     })
     test('false', () => {
-      expect(rules.matches('cuba', 'z')).toBe(false)
-    })
-  })
-
-  describe('contains', () => {
-    test('true', () => {
-      expect(rules.contains('cuba1', 1)).toBe(true)
-    })
-    test('false', () => {
-      expect(rules.contains('cuba', 2)).toBe(false)
+      expect(rules.equals('cuba', 'z')).toBe(false)
     })
   })
 
@@ -150,6 +141,7 @@ describe('test rules functions', () => {
   describe('divisibleBy', () => {
     test('true', () => {
       expect(rules.divisibleBy('25', 5)).toBe(true)
+      expect(rules.divisibleBy('2.2', 1.1)).toBe(true)
     })
     test('false', () => {
       expect(rules.divisibleBy('25', 3)).toBe(false)
