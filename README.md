@@ -2,8 +2,15 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/@eduinlight/input-validator?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@eduinlight/input-validator?style=flat-square)
+![browser support](https://img.shields.io/badge/browser-supported-green)
 
-This library was writed over [validator](https://www.npmjs.com/package/validator). The main reason why this library come up was for simplicity on input validations.
+This library was written over [validator](https://www.npmjs.com/package/validator). The main reason why this library come up was for simplicity on input validations.
+
+## Install
+
+```BASH
+npm install @eduinlight/input-validator
+```
 
 ## Usage
 
@@ -52,6 +59,7 @@ A Rule can be any of the string-check functions of the *validator* library menti
   ascii,
   boolean,
   locale,
+  mongooseId,
   currency**.
 
 A **Rule** can be of two types, a *string rule* and an *object rule*.
@@ -88,7 +96,7 @@ import validate from '@eduinlight/input-validator'
 import {validate} from '@eduinlight/input-validator'
 ```
 
-The validate function receive two params, the data and the schema.
+The validate function receive 3 parameters, the data, the schema, and options.
 
 ```TS
 const form = {
@@ -97,7 +105,9 @@ const form = {
   age: 33
 }
 
-const response = validate(form, schema)
+const response = validate(form, schema, {exact: true})
+// both expressions are equals
+// const response = validate(form, schema)
 
 if(response.valid) {
   // instructions for a valid form
@@ -106,6 +116,16 @@ if(response.valid) {
   // instructions for an invalid form
 }
 
+```
+
+**options** is an bject in the form:
+
+```TS
+{
+  // default to true and verify if the form has no other attributes than 
+  // the ones specified in the schema
+  exact?: boolean  
+}
 ```
 
 ### Errors
