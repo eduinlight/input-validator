@@ -30,5 +30,6 @@ export default {
   ascii: 'todos los caracteres del texto deben ser código ascii',
   boolean: 'valor booleano incorrecto',
   locale: 'el lenguaje no se reconoce',
-  currency: 'la moneda no se reconoce'
+  currency: 'la moneda no se reconoce',
+  mongooseId: 'el id es incorrecto'
 } as LocaleType

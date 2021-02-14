@@ -1,16 +1,16 @@
-import { DataType, FieldError, IObjectRuleType, IValidationResponse, PopulatedRule, RuleType, SchemaType } from './types'
+import { DataType, FieldError, IObjectRuleType, IValidationResponse, PopulatedRule, RuleType, SchemaType, ValidateOptions } from './types'
 import { defaults } from '.'
 
-const messages = defaults.messages[defaults.locale]
+const getMessage = (rule: keyof typeof defaults.rules) => defaults.messages[defaults.locale][rule]
 
 const transformStringRule = (rule: RuleType) :PopulatedRule => {
-  return new PopulatedRule(defaults.rules[rule], [], messages[rule])
+  return new PopulatedRule(defaults.rules[rule], [], getMessage(rule))
 }
 
 const transformObjectRule = (rule: IObjectRuleType): PopulatedRule => {
   const populatedRule = new PopulatedRule()
   populatedRule.rule = defaults.rules[rule.rule]
-  populatedRule.message = messages[rule.rule]
+  populatedRule.message = getMessage(rule.rule)
   populatedRule.params = []
 
   if (
@@ -27,13 +27,33 @@ const transformObjectRule = (rule: IObjectRuleType): PopulatedRule => {
   return populatedRule
 }
 
-const validate = (form: DataType, schema: SchemaType): IValidationResponse => {
+const exactSchema = (form: DataType, schema: SchemaType) => {
+  const conj = new Set(Object.keys(schema))
+  const formKeys = Object.keys(form)
+
+  for (const key of formKeys) {
+    if (!conj.has(key)) {
+      return false
+    }
+  }
+
+  return true
+}
+
+const validate = (form: DataType, schema: SchemaType, { exact }: ValidateOptions = { exact: true }): IValidationResponse => {
   // initialize response object
   const res = {
     errors: [],
     valid: true,
     values: { ...form }
   } as IValidationResponse
+
+  if (exact && !exactSchema(form, schema)) {
+    res.valid = false
+    res.errors = [new FieldError('data provided', `only allowed params ${JSON.stringify(Object.keys(schema))}`)]
+    return res
+  }
+
   // for every schema field
   Object.keys(schema).forEach(field => {
     // get rules of the field

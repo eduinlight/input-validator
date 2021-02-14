@@ -1,5 +1,7 @@
+import alphaNumeric from 'validator/lib/isAlphanumeric'
+
 const isAlphaNumeric = (str: string) => {
-  return /^[a-zA-Z0-9]*$/.test(str)
+  return alphaNumeric(str)
 }
 
 export default isAlphaNumeric

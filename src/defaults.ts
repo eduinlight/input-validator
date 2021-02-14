@@ -9,11 +9,11 @@ const defaults = {
 }
 
 const extendRules = (rules: Record<string, RuleFunctionType>) => {
-  Object.assign(defaults, { rules: { ...defaults.rules, ...rules } })
+  defaults.rules = { ...defaults.rules, ...rules }
 }
 
 const setMessages = (locale: keyof typeof defaultMessages, messages: LocaleType) => {
-  Object.assign(defaults, { messages: { ...defaults.messages, [locale]: messages } })
+  defaults.messages = { ...defaults.messages, [locale]: messages }
 }
 
 const setLocale = (locale: keyof typeof defaultMessages) => {

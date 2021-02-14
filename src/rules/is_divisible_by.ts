@@ -1,4 +1,4 @@
-const INF = 1e-6
+const INF = 1e-9
 
 const isDivisibleBy = (str: string, value: number) => {
   const floatResult = parseFloat(str) / value

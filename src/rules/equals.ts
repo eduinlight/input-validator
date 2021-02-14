@@ -1,5 +1,7 @@
+import eq from 'validator/lib/equals'
+
 const equals = (str: string, to: string) => {
-  return str === to
+  return eq(str, to)
 }
 
 export default equals
