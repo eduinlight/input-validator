@@ -1,5 +1,7 @@
+import float from 'validator/lib/isFloat'
+
 const isFloat = (str: string) => {
-  return /^[+-]?\d*(\.\d+)?$/.test(str)
+  return float(str)
 }
 
 export default isFloat

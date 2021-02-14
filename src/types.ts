@@ -53,3 +53,7 @@ export class InputError extends Error {
     this.errors = errors
   }
 }
+
+export interface ValidateOptions {
+  exact?: boolean;
+}

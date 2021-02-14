@@ -1,7 +1,7 @@
-import isFloat from './is_float'
+import numeric from 'validator/lib/isNumeric'
 
 const isNumeric = (str: string) => {
-  return isFloat(str)
+  return numeric(str)
 }
 
 export default isNumeric

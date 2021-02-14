@@ -22,4 +22,36 @@ describe('test string rules', () => {
     expect(valid.valid).toBe(false)
     expect(valid.errors).toMatchObject([new FieldError('email', defaults.messages[defaults.locale].required)])
   })
+
+  test('exact option true', () => {
+    const form = {
+      email: 'eduinlight@gmail.com',
+      name: 'eduin'
+    }
+
+    const rules: SchemaType = {
+      email: ['required', 'email']
+    }
+
+    const valid = validate(form, rules)
+
+    expect(valid.valid).toBe(false)
+
+    expect(valid.errors).toMatchObject([new FieldError('data provided', 'only allowed params ["email"]')])
+  })
+
+  test('exact option false', () => {
+    const form = {
+      email: 'eduinlight@gmail.com',
+      name: 'eduin'
+    }
+
+    const rules: SchemaType = {
+      email: ['required', 'email']
+    }
+
+    const valid = validate(form, rules, { exact: false })
+
+    expect(valid.valid).toBe(true)
+  })
 })

@@ -1,5 +1,7 @@
+import int from 'validator/lib/isInt'
+
 const isInt = (str: string) => {
-  return /^[+-]?\d+$/.test(str)
+  return int(str)
 }
 
 export default isInt

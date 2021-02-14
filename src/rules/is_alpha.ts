@@ -1,5 +1,7 @@
+import alpha from 'validator/lib/isAlpha'
+
 const isAlpha = (str: string) => {
-  return /^[a-zA-Z]*$/.test(str)
+  return alpha(str)
 }
 
 export default isAlpha

@@ -1,5 +1,7 @@
+import url from 'validator/lib/isURL'
+
 const isUrl = (str: string) => {
-  return /https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%+.~#()?&//=]*)/.test(str)
+  return url(str)
 }
 
 export default isUrl
