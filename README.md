@@ -118,7 +118,7 @@ if(response.valid) {
 
 ```
 
-**options** is an bject in the form:
+**options** is an object in the form:
 
 ```TS
 {
