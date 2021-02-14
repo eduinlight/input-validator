@@ -17,12 +17,13 @@ export interface IObjectRuleType {
   message?: string;
 }
 
-export type SchemaType = Record<string, Array<RuleType | IObjectRuleType>>;
+export type SchemaType = Record<string, Array<RuleType | IObjectRuleType | {rule: SchemaType | [SchemaType]}>>;
 
 export class FieldError {
   field: string;
-  error: string
-  constructor (field: string, error: string) {
+  error: string | FieldError[];
+
+  constructor (field: string, error: string | FieldError[]) {
     this.field = field
     this.error = error
   }
@@ -43,7 +44,7 @@ export class PopulatedRule {
 export interface IValidationResponse {
   valid: boolean;
   errors: FieldError[];
-  values: DataType;
+  values?: DataType;
 }
 
 export class InputError extends Error {
@@ -56,4 +57,5 @@ export class InputError extends Error {
 
 export interface ValidateOptions {
   exact?: boolean;
+  returnValues?: boolean;
 }

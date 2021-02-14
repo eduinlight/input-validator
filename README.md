@@ -12,6 +12,12 @@ This library was written over [validator](https://www.npmjs.com/package/validato
 npm install @eduinlight/input-validator
 ```
 
+### Browser support
+
+````HTML
+<script src="https://unpkg.com/@eduinlight/input-validator/dist/index.umd.min.js"></script>
+````
+
 ## Usage
 
 ### Defining a Schema
@@ -62,7 +68,7 @@ A Rule can be any of the string-check functions of the *validator* library menti
   mongooseId,
   currency**.
 
-A **Rule** can be of two types, a *string rule* and an *object rule*.
+A **Rule** can be of tree types, a *string rule* an *object rule* and a *nested schema rule*.
 
 You can define a list of *string rules* as follow:
 ```TS
@@ -78,12 +84,28 @@ const objRule = {
 }
 ```
 
+A *nested schema rule* has the following form:
+```
+const objRule = {
+  rule: Schema, // here you can use a nested schema to test child objects
+}
+```
+
 ### Full schema example
 ```TS
 const schema = {
   name: ['required'],
   email: ['required', 'email'],
   age: ['required', 'int', {rule: 'min', param: [20]}],
+  professional: [
+    'required',
+    {
+      rule: {
+        address: ["required"],
+        // any check to nested professional object
+      }
+    }
+  ]
 }
 ```
 
@@ -122,17 +144,20 @@ if(response.valid) {
 
 ```TS
 {
-  // default to true and verify if the form has no other attributes than 
-  // the ones specified in the schema
-  exact?: boolean  
+  // default to true 
+  // verify if the form has no other attributes than the ones specified in the schema
+  exact?: boolean,
+  // default to false
+  // insert into the response the value attribute that contains all validated data
+  returnValues?: boolean,
 }
 ```
 
 ### Errors
-Errors are described as a list of:
+Errors are described recursively as follow:
 
 ```TS
-{ field: string, error: string }
+[{ field: string, error: string | Errors }]
 ```
 
 ## Tests

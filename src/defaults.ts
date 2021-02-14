@@ -8,6 +8,8 @@ const defaults = {
   rules: defaultRules
 }
 
+const getMessage = (rule: keyof typeof defaults.rules) => defaults.messages[defaults.locale][rule]
+
 const extendRules = (rules: Record<string, RuleFunctionType>) => {
   defaults.rules = { ...defaults.rules, ...rules }
 }
@@ -20,6 +22,6 @@ const setLocale = (locale: keyof typeof defaultMessages) => {
   defaults.locale = locale
 }
 
-export { defaults, extendRules, setMessages, setLocale }
+export { defaults, extendRules, setMessages, setLocale, getMessage }
 
 export default defaults
