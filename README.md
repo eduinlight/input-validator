@@ -3,8 +3,9 @@
 ![npm type definitions](https://img.shields.io/npm/types/@eduinlight/input-validator?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@eduinlight/input-validator?style=flat-square)
 ![browser support](https://img.shields.io/badge/browser-supported-green)
+![decorators supported](https://img.shields.io/badge/decorators-supported-orange)
 
-This library was written over [validator](https://www.npmjs.com/package/validator). The main reason why this library come up was for simplicity on input validations.
+This library was written using the [validator](https://www.npmjs.com/package/validator) functions. The main reason why this library come up was for simplicity on input validations.
 
 ## Install
 
@@ -109,6 +110,38 @@ const schema = {
 }
 ```
 
+## Defining a schema using decorators
+This library fully support the use of decorators. The declaration list is in reverse order of declaration. Please see the next example:
+
+```TS
+import { 
+  IsInt, 
+  IsRequired, 
+  MinValue, 
+  NestedSchema, 
+  ValidationSchema 
+} from '@eduinlight/input-validator/decorators'
+
+@ValidationSchema() //use this special decorator to generate a schema of your class
+class Author {
+  @IsRequired()
+  name: string;
+
+  @MinValue(10) //and second check if the value is bigger than 10
+  @IsInt()      //check if is int first
+  age: number;
+}
+
+@ValidationSchema()
+class Book {
+  @IsRequired()
+  name: string;
+
+  @NestedSchema(Author) //use this spcial decorator to generate a nested schema
+  author: Author
+}
+```
+
 ## Validate
 
 First you need to import the validate function.
@@ -137,7 +170,6 @@ if(response.valid) {
   console.log(response.errors)
   // instructions for an invalid form
 }
-
 ```
 
 **options** is an object in the form:
@@ -151,6 +183,19 @@ if(response.valid) {
   // insert into the response the value attribute that contains all validated data
   returnValues?: boolean,
 }
+```
+
+### Validate using a Decorated Schema
+```TS
+const form = {
+  name: 'cuba',
+  author: {
+    name: 'eduin',
+    age: 10
+  }
+}
+
+const valid = validate(form, Book)
 ```
 
 ### Errors

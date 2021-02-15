@@ -1,5 +1,6 @@
 import { FieldError, SchemaType } from '../src/types'
 import { validate, getMessage } from '../src'
+import { IsInt, IsRequired, MinValue, NestedSchema, ValidationSchema } from '../src/decorators'
 
 describe('test string rules', () => {
   test('required and email', () => {
@@ -126,5 +127,40 @@ describe('test string rules', () => {
 
     expect(valid.valid).toBe(false)
     expect(valid.errors).toMatchObject([new FieldError('professional', [new FieldError('zipcode', getMessage('int'))])])
+  })
+
+  describe('decorators', () => {
+    @ValidationSchema()
+    class Author {
+      @IsRequired()
+      name: string;
+
+      @MinValue(10)
+      @IsInt()
+      age: number;
+    }
+
+    @ValidationSchema()
+    class Book {
+      @IsRequired()
+      name: string;
+
+      @NestedSchema(Author)
+      author: Author
+    }
+
+    test('nested decorator', () => {
+      const form = {
+        name: 'cuba',
+        author: {
+          name: 'eduin',
+          age: 10
+        }
+      }
+
+      const valid = validate(form, Book as any)
+      expect(valid.valid).toBe(true)
+      expect(valid.errors).toMatchObject([])
+    })
   })
 })

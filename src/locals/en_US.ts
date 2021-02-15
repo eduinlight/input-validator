@@ -31,5 +31,7 @@ export default {
   boolean: 'wrong boolean value',
   locale: 'wrong languaje value',
   currency: 'wrong currency value',
-  mongooseId: 'the id is invalid'
+  mongooseId: 'the id is invalid',
+  maxValue: 'value must be less or equal to %p1',
+  minValue: 'value must be more or equal to %p1'
 } as LocaleType
