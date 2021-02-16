@@ -3,14 +3,21 @@
 ![npm type definitions](https://img.shields.io/npm/types/@eduinlight/input-validator?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@eduinlight/input-validator?style=flat-square)
 ![browser support](https://img.shields.io/badge/browser-supported-green)
+![decorators supported](https://img.shields.io/badge/decorators-supported-orange)
 
-This library was written over [validator](https://www.npmjs.com/package/validator). The main reason why this library come up was for simplicity on input validations.
+This library was written using the [validator](https://www.npmjs.com/package/validator) functions. The main reason why this library come up was for simplicity on input validations.
 
 ## Install
 
 ```BASH
 npm install @eduinlight/input-validator
 ```
+
+### Browser support
+
+````HTML
+<script src="https://unpkg.com/@eduinlight/input-validator/dist/index.umd.min.js"></script>
+````
 
 ## Usage
 
@@ -62,7 +69,7 @@ A Rule can be any of the string-check functions of the *validator* library menti
   mongooseId,
   currency**.
 
-A **Rule** can be of two types, a *string rule* and an *object rule*.
+A **Rule** can be of tree types, a *string rule* an *object rule* and a *nested schema rule*.
 
 You can define a list of *string rules* as follow:
 ```TS
@@ -78,12 +85,60 @@ const objRule = {
 }
 ```
 
+A *nested schema rule* has the following form:
+```
+const objRule = {
+  rule: Schema, // here you can use a nested schema to test child objects
+}
+```
+
 ### Full schema example
 ```TS
 const schema = {
   name: ['required'],
   email: ['required', 'email'],
   age: ['required', 'int', {rule: 'min', param: [20]}],
+  professional: [
+    'required',
+    {
+      rule: {
+        address: ["required"],
+        // any check to nested professional object
+      }
+    }
+  ]
+}
+```
+
+## Defining a schema using decorators
+This library fully support the use of decorators. The declaration list is in reverse order of declaration. Please see the next example:
+
+```TS
+import { 
+  IsInt, 
+  IsRequired, 
+  MinValue, 
+  NestedSchema, 
+  ValidationSchema 
+} from '@eduinlight/input-validator/decorators'
+
+@ValidationSchema() //use this special decorator to generate a schema of your class
+class Author {
+  @IsRequired()
+  name: string;
+
+  @MinValue(10) //and second check if the value is bigger than 10
+  @IsInt()      //check if is int first
+  age: number;
+}
+
+@ValidationSchema()
+class Book {
+  @IsRequired()
+  name: string;
+
+  @NestedSchema(Author) //use this spcial decorator to generate a nested schema
+  author: Author
 }
 ```
 
@@ -115,24 +170,39 @@ if(response.valid) {
   console.log(response.errors)
   // instructions for an invalid form
 }
-
 ```
 
 **options** is an object in the form:
 
 ```TS
 {
-  // default to true and verify if the form has no other attributes than 
-  // the ones specified in the schema
-  exact?: boolean  
+  // default to true 
+  // verify if the form has no other attributes than the ones specified in the schema
+  exact?: boolean,
+  // default to false
+  // insert into the response the value attribute that contains all validated data
+  returnValues?: boolean,
 }
 ```
 
+### Validate using a Decorated Schema
+```TS
+const form = {
+  name: 'cuba',
+  author: {
+    name: 'eduin',
+    age: 10
+  }
+}
+
+const valid = validate(form, Book)
+```
+
 ### Errors
-Errors are described as a list of:
+Errors are described recursively as follow:
 
 ```TS
-{ field: string, error: string }
+[{ field: string, error: string | Errors }]
 ```
 
 ## Tests

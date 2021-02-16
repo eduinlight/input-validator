@@ -29,6 +29,8 @@ import isUppercase from './is_uppercase'
 import isUrl from './is_url'
 import matches from './matches'
 import isBoolean from './is_boolean'
+import minValue from './min_value'
+import maxValue from './max_value'
 
 const rules = {
   equals: equals,
@@ -61,7 +63,9 @@ const rules = {
   boolean: isBoolean,
   locale: isLocale,
   currency: isCurrency,
-  mongooseId: isMongooseId
+  mongooseId: isMongooseId,
+  minValue: minValue,
+  maxValue: maxValue
 }
 
 export default rules
