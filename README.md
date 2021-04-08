@@ -122,7 +122,7 @@ import {
   MinValue, 
   NestedSchema, 
   ValidationSchema 
-} from '@eduinlight/input-validator/decorators'
+} from '@eduinlight/input-validator/dist/decorators'
 
 @ValidationSchema() //use this special decorator to generate a schema of your class
 class Author {
