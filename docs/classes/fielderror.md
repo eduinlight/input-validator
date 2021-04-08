@@ -28,7 +28,7 @@ Name | Type |
 
 **Returns:** [*FieldError*](fielderror.md)
 
-Defined in: [types.ts:24](https://github.com/eduinlight/input-validator/blob/9d7908f/src/types.ts#L24)
+Defined in: [types.ts:24](https://github.com/eduinlight/input-validator/blob/2de5682/src/types.ts#L24)
 
 ## Properties
 
@@ -36,7 +36,7 @@ Defined in: [types.ts:24](https://github.com/eduinlight/input-validator/blob/9d7
 
 • **error**: *string* \| [*FieldError*](fielderror.md)[]
 
-Defined in: [types.ts:24](https://github.com/eduinlight/input-validator/blob/9d7908f/src/types.ts#L24)
+Defined in: [types.ts:24](https://github.com/eduinlight/input-validator/blob/2de5682/src/types.ts#L24)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 • **field**: *string*
 
-Defined in: [types.ts:23](https://github.com/eduinlight/input-validator/blob/9d7908f/src/types.ts#L23)
+Defined in: [types.ts:23](https://github.com/eduinlight/input-validator/blob/2de5682/src/types.ts#L23)
