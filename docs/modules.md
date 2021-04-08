@@ -47,7 +47,7 @@ Renames and exports: [validate](modules.md#validate)
 
 Ƭ **SchemaType**: *Record*<string, (RuleType \| IObjectRuleType \| { `rule`: [*SchemaType*](modules.md#schematype) \| [[*SchemaType*](modules.md#schematype)]  })[]\>
 
-Defined in: [types.ts:20](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/types.ts#L20)
+Defined in: [types.ts:20](https://github.com/eduinlight/input-validator/blob/6f577f6/src/types.ts#L20)
 
 ## Variables
 
@@ -98,13 +98,13 @@ Name | Type |
 `rules.uppercase` | (`str`: *string*) => *boolean* |
 `rules.url` | (`str`: *string*) => *boolean* |
 
-Defined in: [defaults.ts:5](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/defaults.ts#L5)
+Defined in: [defaults.ts:5](https://github.com/eduinlight/input-validator/blob/6f577f6/src/defaults.ts#L5)
 
 ## Functions
 
 ### errorsArrayToObject
 
-▸ `Const`**errorsArrayToObject**(`errors`: [*FieldError*](classes/fielderror.md)[]): *object*
+▸ `Const`**errorsArrayToObject**(`errors`: [*FieldError*](classes/fielderror.md)[]): *Record*<string, string\>
 
 #### Parameters:
 
@@ -112,9 +112,9 @@ Name | Type |
 :------ | :------ |
 `errors` | [*FieldError*](classes/fielderror.md)[] |
 
-**Returns:** *object*
+**Returns:** *Record*<string, string\>
 
-Defined in: [errors_array_to_object.ts:3](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/errors_array_to_object.ts#L3)
+Defined in: [errors_array_to_object.ts:3](https://github.com/eduinlight/input-validator/blob/6f577f6/src/errors_array_to_object.ts#L3)
 
 ___
 
@@ -130,7 +130,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [defaults.ts:13](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/defaults.ts#L13)
+Defined in: [defaults.ts:13](https://github.com/eduinlight/input-validator/blob/6f577f6/src/defaults.ts#L13)
 
 ___
 
@@ -146,7 +146,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [defaults.ts:11](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/defaults.ts#L11)
+Defined in: [defaults.ts:11](https://github.com/eduinlight/input-validator/blob/6f577f6/src/defaults.ts#L11)
 
 ___
 
@@ -162,7 +162,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [defaults.ts:21](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/defaults.ts#L21)
+Defined in: [defaults.ts:21](https://github.com/eduinlight/input-validator/blob/6f577f6/src/defaults.ts#L21)
 
 ___
 
@@ -179,7 +179,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [defaults.ts:17](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/defaults.ts#L17)
+Defined in: [defaults.ts:17](https://github.com/eduinlight/input-validator/blob/6f577f6/src/defaults.ts#L17)
 
 ___
 
@@ -206,7 +206,7 @@ Name | Type |
 
 The arithmetic mean of `x` and `y`
 
-Defined in: [validate.ts:63](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/validate.ts#L63)
+Defined in: [validate.ts:63](https://github.com/eduinlight/input-validator/blob/6f577f6/src/validate.ts#L63)
 
 ___
 
@@ -224,7 +224,7 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [validateAsync.ts:4](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/validateAsync.ts#L4)
+Defined in: [validateAsync.ts:4](https://github.com/eduinlight/input-validator/blob/6f577f6/src/validateAsync.ts#L4)
 
 ___
 
@@ -241,4 +241,4 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [validate_with_error.ts:4](https://github.com/eduinlight/input-validator/blob/5ae82d6/src/validate_with_error.ts#L4)
+Defined in: [validate_with_error.ts:4](https://github.com/eduinlight/input-validator/blob/6f577f6/src/validate_with_error.ts#L4)
