@@ -14,7 +14,7 @@ export type RuleFunctionType = (str: string, ...args: RuleParamType[]) => boolea
 export interface IObjectRuleType {
   rule: RuleType;
   params?: RuleParamType[];
-  message?: string;
+  message?: string | (() => string);
 }
 
 export type SchemaType = Record<string, Array<RuleType | IObjectRuleType | {rule: SchemaType | [SchemaType]}>>;

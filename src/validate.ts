@@ -20,7 +20,7 @@ const transformObjectRule = (rule: IObjectRuleType): PopulatedRule => {
   }
 
   if (rule.message) {
-    populatedRule.message = rule.message
+    populatedRule.message = typeof rule.message === 'function' ? rule.message() : rule.message
   }
   return populatedRule
 }
