@@ -1,6 +1,6 @@
 {
   "name": "@eduinlight/input-validator",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "This library is a tool for forms validation and can be used for frontend and backend.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,7 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "husky install",
     "clean": "rm -rf dist && rm -rf ./docs",
     "build": "npm-run-all --parallel build:*",
     "build:tsc": "tsc",
