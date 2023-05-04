@@ -1,4 +1,4 @@
-import rules from './rules'
+import { rules } from '.'
 
 export type RuleType = keyof typeof rules;
 
@@ -20,8 +20,9 @@ export interface IObjectRuleType {
 export type SchemaType = Record<string, Array<RuleType | IObjectRuleType | {rule: SchemaType | [SchemaType]}>>;
 
 export class FieldError {
-  field: string;
-  error: string | FieldError[];
+  field: string
+  // eslint-disable-next-line no-use-before-define
+  error: string | FieldError[]
 
   constructor (field: string, error: string | FieldError[]) {
     this.field = field
@@ -30,9 +31,9 @@ export class FieldError {
 }
 
 export class PopulatedRule {
-  rule: any = () => true;
-  params: RuleParamType[] = [];
-  message = '';
+  rule: any = () => true
+  params: RuleParamType[] = []
+  message = ''
 
   constructor (rule: any = () => true, params: RuleParamType[] = [], message: string = '') {
     this.rule = rule

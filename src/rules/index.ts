@@ -1,71 +1,33 @@
-import contains from './contains'
-import equals from './equals'
-import isAfterDate from './is_after_date'
-import isAlpha from './is_alpha'
-import isAlphaNumeric from './is_alpha_numeric'
-import isAscii from './is_ascii'
-import isBase64 from './is_base64'
-import isBeforeDate from './is_before_date'
-import isCreditCard from './is_credit_card'
-import isCurrency from './is_currency'
-import isDate from './is_date'
-import isDivisibleBy from './is_divisible_by'
-import isEmail from './is_email'
-import isFloat from './is_float'
-import isHexadecimal from './is_hexadecimal'
-import isHexcolor from './is_hexcolor'
-import isIn from './is_in'
-import isInt from './is_int'
-import isIP from './is_ip'
-import isJson from './is_json'
-import isLocale from './is_locale'
-import isLowercase from './is_lowercase'
-import isMaxLength from './is_max_length'
-import isMinLength from './is_min_length'
-import isMongooseId from './is_mongoose_id'
-import isNumeric from './is_numeric'
-import isRequired from './is_required'
-import isUppercase from './is_uppercase'
-import isUrl from './is_url'
-import matches from './matches'
-import isBoolean from './is_boolean'
-import minValue from './min_value'
-import maxValue from './max_value'
-
-const rules = {
-  equals: equals,
-  contains: contains,
-  matches: matches,
-  email: isEmail,
-  url: isUrl,
-  ip: isIP,
-  alpha: isAlpha,
-  numeric: isNumeric,
-  alphaNumeric: isAlphaNumeric,
-  base64: isBase64,
-  hexadecimal: isHexadecimal,
-  hexcolor: isHexcolor,
-  lowercase: isLowercase,
-  uppercase: isUppercase,
-  int: isInt,
-  float: isFloat,
-  divisibleBy: isDivisibleBy,
-  required: isRequired,
-  minLength: isMinLength,
-  maxLength: isMaxLength,
-  date: isDate,
-  afterDate: isAfterDate,
-  beforeDate: isBeforeDate,
-  in: isIn,
-  creditCard: isCreditCard,
-  json: isJson,
-  ascii: isAscii,
-  boolean: isBoolean,
-  locale: isLocale,
-  currency: isCurrency,
-  mongooseId: isMongooseId,
-  minValue: minValue,
-  maxValue: maxValue
-}
-
-export default rules
+export * from './contains'
+export * from './equals'
+export { isAfterDate as afterDate } from './is_after_date'
+export { IsAlpha as alpha } from './is_alpha'
+export { isAlphaNumeric as alphaNumeric } from './is_alpha_numeric'
+export { isAscii as ascii } from './is_ascii'
+export { isBase64 as base64 } from './is_base64'
+export { isBeforeDate as beforeDate } from './is_before_date'
+export { isCreditCard as creditCard } from './is_credit_card'
+export { isCurrency as currency } from './is_currency'
+export { isDate as date } from './is_date'
+export { isDivisibleBy as divisibleBy } from './is_divisible_by'
+export { isEmail as email } from './is_email'
+export { isFloat as float } from './is_float'
+export { isHexadecimal as hexadecimal } from './is_hexadecimal'
+export { isHexcolor as hexcolor } from './is_hexcolor'
+export { isIn as in } from './is_in'
+export { isInt as int } from './is_int'
+export { isIP as ip } from './is_ip'
+export { isJson as json } from './is_json'
+export { isLocale as locale } from './is_locale'
+export { isLowercase as lowercase } from './is_lowercase'
+export { isMaxLength as maxLength } from './is_max_length'
+export { isMinLength as minLength } from './is_min_length'
+export { isMongooseId as mongooseId } from './is_mongoose_id'
+export { isNumeric as numeric } from './is_numeric'
+export { isRequired as required } from './is_required'
+export { isUppercase as uppercase } from './is_uppercase'
+export { isUrl as url } from './is_url'
+export { matches } from './matches'
+export { isBoolean as boolean } from './is_boolean'
+export { minValue } from './min_value'
+export { maxValue } from './max_value'

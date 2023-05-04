@@ -1,7 +1,5 @@
 import json from 'validator/lib/isJSON'
 
-const isJson = (str: string) => {
+export const isJson = (str: string) => {
   return json(str)
 }
-
-export default isJson

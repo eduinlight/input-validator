@@ -1,6 +1,6 @@
 import { SchemaType } from './types'
 
-const removeRequiredFromRules = (rules: SchemaType): SchemaType => {
+export const removeRequiredFromRules = (rules: SchemaType): SchemaType => {
   const newRules: any = {}
   Object.keys(rules).forEach(key => {
     newRules[key] = rules[key].filter(rule => {
@@ -12,5 +12,3 @@ const removeRequiredFromRules = (rules: SchemaType): SchemaType => {
   })
   return newRules
 }
-
-export default removeRequiredFromRules

@@ -1,5 +1,3 @@
-const isMinLength = (str: string, value: number) => {
+export const isMinLength = (str: string, value: number) => {
   return str.length >= value
 }
-
-export default isMinLength

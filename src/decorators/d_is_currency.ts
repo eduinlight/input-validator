@@ -1,9 +1,7 @@
 import { IObjectRuleType } from '../types'
 
-const IsCurrency = (message?: string) =>
-  (target: any, key: string) => {
+export const IsCurrency = (message?: string) =>
+  (target: any, key: any) => {
     const current = target[key] || []
     target[key] = [...current, { rule: 'currency', ...(message ? { message } : {}) } as IObjectRuleType]
   }
-
-export default IsCurrency

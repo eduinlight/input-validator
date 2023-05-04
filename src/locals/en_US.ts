@@ -1,6 +1,6 @@
 import { LocaleType } from '../types'
 
-export default {
+export const enUS = {
   equals: 'the text is diferent from %p1',
   contains: 'the text do not contain %p1',
   matches: 'the text do not match $p1',

@@ -60,7 +60,7 @@ const parseOptions = (options?: ValidateOptions) => {
  *
  * @beta
  */
-const validate = (form: DataType, schema: SchemaType, options?: ValidateOptions): IValidationResponse => {
+export const validate = (form: DataType, schema: SchemaType, options?: ValidateOptions): IValidationResponse => {
   const { exact, returnValues } = parseOptions(options)
 
   // initialize response object
@@ -155,5 +155,3 @@ const validate = (form: DataType, schema: SchemaType, options?: ValidateOptions)
   })
   return res
 }
-
-export default validate

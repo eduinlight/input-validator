@@ -1,7 +1,10 @@
 import { IValidationResponse } from './types'
 
-const errorsArrayToObject = (errors: IValidationResponse['errors']): Record<string, string> => {
-  return errors.reduce((acc, act) => ({ ...acc, [act.field]: act.error }), {})
+export const errorsArrayToObject = (errors: IValidationResponse['errors']): Record<string, string> => {
+  return errors.reduce((acc, curr) => ({
+    ...acc,
+    [curr.field]: Array.isArray(curr.error)
+      ? { ...errorsArrayToObject(curr.error) }
+      : curr.error
+  }), {})
 }
-
-export default errorsArrayToObject

@@ -1,9 +1,7 @@
 import { IObjectRuleType } from '../types'
 
-const IsMongooseId = (message?: string) =>
-  (target: any, key: string) => {
+export const IsMongooseId = (message?: string) =>
+  (target: any, key: any) => {
     const current = target[key] || []
     target[key] = [...current, { rule: 'mongooseId', ...(message ? { message } : {}) } as IObjectRuleType]
   }
-
-export default IsMongooseId

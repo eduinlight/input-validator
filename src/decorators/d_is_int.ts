@@ -1,9 +1,7 @@
 import { IObjectRuleType } from '../types'
 
-const IsInt = (message?: string) =>
-  (target: any, key: string) => {
+export const IsInt = (message?: string) =>
+  (target: any, key: any) => {
     const current = target[key] || []
     target[key] = [...current, { rule: 'int', ...(message ? { message } : {}) } as IObjectRuleType]
   }
-
-export default IsInt

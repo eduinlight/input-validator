@@ -150,8 +150,6 @@ class Book {
 
 First you need to import the validate function.
 ```TS
-import validate from '@eduinlight/input-validator'
-//or
 import {validate} from '@eduinlight/input-validator'
 ```
 

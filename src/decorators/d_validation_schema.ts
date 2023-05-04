@@ -1,6 +1,2 @@
-const ValidationSchema = () =>
-  (target: any) => {
-    return target.prototype
-  }
-
-export default ValidationSchema
+export const ValidationSchema = () => (constructor: Function) =>
+  constructor.prototype

@@ -1,4 +1,4 @@
-import { FieldError, SchemaType } from '../src/types'
+import { FieldError, InputError, SchemaType } from '../src/types'
 import { validateWithError, defaults } from '../src'
 
 describe('test string rules', () => {
@@ -18,7 +18,7 @@ describe('test string rules', () => {
 
       validateWithError(form, rules)
     } catch (error) {
-      expect(error.errors).toMatchObject([new FieldError('email', defaults.messages[defaults.locale].required)])
+      expect((error as InputError).errors).toMatchObject([new FieldError('email', defaults.messages[defaults.locale].required)])
     }
   })
 })

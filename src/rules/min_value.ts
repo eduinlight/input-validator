@@ -1,5 +1,3 @@
-const minValue = (str: string, value: number) => {
+export const minValue = (str: string, value: number) => {
   return value <= parseFloat(str)
 }
-
-export default minValue

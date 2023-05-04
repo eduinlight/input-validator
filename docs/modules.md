@@ -6,17 +6,50 @@
 
 ### References
 
-- [default](modules.md#default)
+- [afterDate](modules.md#afterdate)
+- [alpha](modules.md#alpha)
+- [alphaNumeric](modules.md#alphanumeric)
+- [ascii](modules.md#ascii)
+- [base64](modules.md#base64)
+- [beforeDate](modules.md#beforedate)
+- [boolean](modules.md#boolean)
+- [contains](modules.md#contains)
+- [creditCard](modules.md#creditcard)
+- [currency](modules.md#currency)
+- [date](modules.md#date)
+- [divisibleBy](modules.md#divisibleby)
+- [email](modules.md#email)
+- [equals](modules.md#equals)
+- [float](modules.md#float)
+- [hexadecimal](modules.md#hexadecimal)
+- [hexcolor](modules.md#hexcolor)
+- [in](modules.md#in)
+- [int](modules.md#int)
+- [ip](modules.md#ip)
+- [json](modules.md#json)
+- [locale](modules.md#locale)
+- [lowercase](modules.md#lowercase)
+- [matches](modules.md#matches)
+- [maxLength](modules.md#maxlength)
+- [maxValue](modules.md#maxvalue)
+- [minLength](modules.md#minlength)
+- [minValue](modules.md#minvalue)
+- [mongooseId](modules.md#mongooseid)
+- [numeric](modules.md#numeric)
+- [required](modules.md#required)
+- [uppercase](modules.md#uppercase)
+- [url](modules.md#url)
 
 ### Namespaces
 
 - [locales](modules/locales.md)
+- [rules](modules/rules.md)
 
 ### Classes
 
-- [FieldError](classes/fielderror.md)
+- [FieldError](classes/FieldError.md)
 
-### Type aliases
+### Type Aliases
 
 - [SchemaType](modules.md#schematype)
 
@@ -37,208 +70,400 @@
 
 ## References
 
-### default
+### afterDate
 
-Renames and exports: [validate](modules.md#validate)
+Re-exports [afterDate](modules/rules.md#afterdate)
 
-## Type aliases
+___
+
+### alpha
+
+Re-exports [alpha](modules/rules.md#alpha)
+
+___
+
+### alphaNumeric
+
+Re-exports [alphaNumeric](modules/rules.md#alphanumeric)
+
+___
+
+### ascii
+
+Re-exports [ascii](modules/rules.md#ascii)
+
+___
+
+### base64
+
+Re-exports [base64](modules/rules.md#base64)
+
+___
+
+### beforeDate
+
+Re-exports [beforeDate](modules/rules.md#beforedate)
+
+___
+
+### boolean
+
+Re-exports [boolean](modules/rules.md#boolean)
+
+___
+
+### contains
+
+Re-exports [contains](modules/rules.md#contains)
+
+___
+
+### creditCard
+
+Re-exports [creditCard](modules/rules.md#creditcard)
+
+___
+
+### currency
+
+Re-exports [currency](modules/rules.md#currency)
+
+___
+
+### date
+
+Re-exports [date](modules/rules.md#date)
+
+___
+
+### divisibleBy
+
+Re-exports [divisibleBy](modules/rules.md#divisibleby)
+
+___
+
+### email
+
+Re-exports [email](modules/rules.md#email)
+
+___
+
+### equals
+
+Re-exports [equals](modules/rules.md#equals)
+
+___
+
+### float
+
+Re-exports [float](modules/rules.md#float)
+
+___
+
+### hexadecimal
+
+Re-exports [hexadecimal](modules/rules.md#hexadecimal)
+
+___
+
+### hexcolor
+
+Re-exports [hexcolor](modules/rules.md#hexcolor)
+
+___
+
+### in
+
+Re-exports [in](modules/rules.md#in)
+
+___
+
+### int
+
+Re-exports [int](modules/rules.md#int)
+
+___
+
+### ip
+
+Re-exports [ip](modules/rules.md#ip)
+
+___
+
+### json
+
+Re-exports [json](modules/rules.md#json)
+
+___
+
+### locale
+
+Re-exports [locale](modules/rules.md#locale)
+
+___
+
+### lowercase
+
+Re-exports [lowercase](modules/rules.md#lowercase)
+
+___
+
+### matches
+
+Re-exports [matches](modules/rules.md#matches)
+
+___
+
+### maxLength
+
+Re-exports [maxLength](modules/rules.md#maxlength)
+
+___
+
+### maxValue
+
+Re-exports [maxValue](modules/rules.md#maxvalue)
+
+___
+
+### minLength
+
+Re-exports [minLength](modules/rules.md#minlength)
+
+___
+
+### minValue
+
+Re-exports [minValue](modules/rules.md#minvalue)
+
+___
+
+### mongooseId
+
+Re-exports [mongooseId](modules/rules.md#mongooseid)
+
+___
+
+### numeric
+
+Re-exports [numeric](modules/rules.md#numeric)
+
+___
+
+### required
+
+Re-exports [required](modules/rules.md#required)
+
+___
+
+### uppercase
+
+Re-exports [uppercase](modules/rules.md#uppercase)
+
+___
+
+### url
+
+Re-exports [url](modules/rules.md#url)
+
+## Type Aliases
 
 ### SchemaType
 
-Ƭ **SchemaType**: *Record*<string, (RuleType \| IObjectRuleType \| { `rule`: [*SchemaType*](modules.md#schematype) \| [[*SchemaType*](modules.md#schematype)]  })[]\>
+Ƭ **SchemaType**: `Record`<`string`, (`RuleType` \| `IObjectRuleType` \| { `rule`: [`SchemaType`](modules.md#schematype) \| [[`SchemaType`](modules.md#schematype)]  })[]\>
 
-Defined in: [types.ts:20](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/types.ts#L20)
+#### Defined in
+
+[types.ts:20](https://github.com/eduinlight/input-validator/blob/7845c82/src/types.ts#L20)
 
 ## Variables
 
 ### defaults
 
-• `Const` **defaults**: *object*
+• `Const` **defaults**: `Object`
 
-#### Type declaration:
+#### Type declaration
 
-Name | Type |
-:------ | :------ |
-`locale` | *enUS* \| *esES* |
-`messages` | *object* |
-`messages.enUS` | LocaleType |
-`messages.esES` | LocaleType |
-`rules` | *object* |
-`rules.afterDate` | (`str`: *string*, `date`: *string*) => *boolean* |
-`rules.alpha` | (`str`: *string*) => *boolean* |
-`rules.alphaNumeric` | (`str`: *string*) => *boolean* |
-`rules.ascii` | (`str`: *string*) => *boolean* |
-`rules.base64` | (`str`: *string*) => *boolean* |
-`rules.beforeDate` | (`str`: *string*, `date`: *string*) => *boolean* |
-`rules.boolean` | (`str`: *string*) => *boolean* |
-`rules.contains` | (`str`: *string*, `seed`: *any*) => *boolean* |
-`rules.creditCard` | (`str`: *string*) => *boolean* |
-`rules.currency` | (`str`: *string*) => *boolean* |
-`rules.date` | (`str`: *string*) => *boolean* |
-`rules.divisibleBy` | (`str`: *string*, `value`: *number*) => *boolean* |
-`rules.email` | (`str`: *string*) => *boolean* |
-`rules.equals` | (`str`: *string*, `to`: *string*) => *boolean* |
-`rules.float` | (`str`: *string*) => *boolean* |
-`rules.hexadecimal` | (`str`: *string*) => *boolean* |
-`rules.hexcolor` | (`str`: *string*) => *boolean* |
-`rules.in` | (`str`: *string*, `values`: *any*[]) => *boolean* |
-`rules.int` | (`str`: *string*) => *boolean* |
-`rules.ip` | (`str`: *string*) => *boolean* |
-`rules.json` | (`str`: *string*) => *boolean* |
-`rules.locale` | (`str`: *string*) => *boolean* |
-`rules.lowercase` | (`str`: *string*) => *boolean* |
-`rules.matches` | (`str`: *string*, `regexp`: *RegExp*) => *boolean* |
-`rules.maxLength` | (`str`: *string*, `value`: *number*) => *boolean* |
-`rules.maxValue` | (`str`: *string*, `value`: *number*) => *boolean* |
-`rules.minLength` | (`str`: *string*, `value`: *number*) => *boolean* |
-`rules.minValue` | (`str`: *string*, `value`: *number*) => *boolean* |
-`rules.mongooseId` | (`str`: *string*) => *boolean* |
-`rules.numeric` | (`str`: *string*) => *boolean* |
-`rules.required` | (`str`: *string*) => *boolean* |
-`rules.uppercase` | (`str`: *string*) => *boolean* |
-`rules.url` | (`str`: *string*) => *boolean* |
+| Name | Type |
+| :------ | :------ |
+| `locale` | ``"enUS"`` \| ``"esES"`` |
+| `messages` | [`locales`](modules/locales.md) |
+| `rules` | [`rules`](modules/rules.md) |
 
-Defined in: [defaults.ts:5](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/defaults.ts#L5)
+#### Defined in
+
+[defaults.ts:5](https://github.com/eduinlight/input-validator/blob/7845c82/src/defaults.ts#L5)
 
 ## Functions
 
 ### errorsArrayToObject
 
-▸ `Const`**errorsArrayToObject**(`errors`: [*FieldError*](classes/fielderror.md)[]): *Record*<string, string\>
+▸ **errorsArrayToObject**(`errors`): `Record`<`string`, `string`\>
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`errors` | [*FieldError*](classes/fielderror.md)[] |
+| Name | Type |
+| :------ | :------ |
+| `errors` | [`FieldError`](classes/FieldError.md)[] |
 
-**Returns:** *Record*<string, string\>
+#### Returns
 
-Defined in: [errors_array_to_object.ts:3](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/errors_array_to_object.ts#L3)
+`Record`<`string`, `string`\>
+
+#### Defined in
+
+[errors_array_to_object.ts:3](https://github.com/eduinlight/input-validator/blob/7845c82/src/errors_array_to_object.ts#L3)
 
 ___
 
 ### extendRules
 
-▸ `Const`**extendRules**(`rules`: *Record*<string, RuleFunctionType\>): *void*
+▸ **extendRules**(`rules`): `void`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`rules` | *Record*<string, RuleFunctionType\> |
+| Name | Type |
+| :------ | :------ |
+| `rules` | `Record`<`string`, `RuleFunctionType`\> |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [defaults.ts:13](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/defaults.ts#L13)
+`void`
+
+#### Defined in
+
+[defaults.ts:13](https://github.com/eduinlight/input-validator/blob/7845c82/src/defaults.ts#L13)
 
 ___
 
 ### getMessage
 
-▸ `Const`**getMessage**(`rule`: *boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue*): *string*
+▸ **getMessage**(`rule`): `string`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`rule` | *boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* |
+| Name | Type |
+| :------ | :------ |
+| `rule` | ``"boolean"`` \| ``"afterDate"`` \| ``"alpha"`` \| ``"alphaNumeric"`` \| ``"ascii"`` \| ``"base64"`` \| ``"beforeDate"`` \| ``"creditCard"`` \| ``"currency"`` \| ``"date"`` \| ``"divisibleBy"`` \| ``"email"`` \| ``"float"`` \| ``"hexadecimal"`` \| ``"hexcolor"`` \| ``"in"`` \| ``"int"`` \| ``"ip"`` \| ``"json"`` \| ``"locale"`` \| ``"lowercase"`` \| ``"maxLength"`` \| ``"minLength"`` \| ``"mongooseId"`` \| ``"numeric"`` \| ``"required"`` \| ``"uppercase"`` \| ``"url"`` \| ``"matches"`` \| ``"minValue"`` \| ``"maxValue"`` \| ``"contains"`` \| ``"equals"`` |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [defaults.ts:11](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/defaults.ts#L11)
+`string`
+
+#### Defined in
+
+[defaults.ts:11](https://github.com/eduinlight/input-validator/blob/7845c82/src/defaults.ts#L11)
 
 ___
 
 ### setLocale
 
-▸ `Const`**setLocale**(`locale`: *enUS* \| *esES*): *void*
+▸ **setLocale**(`locale`): `void`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`locale` | *enUS* \| *esES* |
+| Name | Type |
+| :------ | :------ |
+| `locale` | ``"enUS"`` \| ``"esES"`` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [defaults.ts:21](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/defaults.ts#L21)
+`void`
+
+#### Defined in
+
+[defaults.ts:21](https://github.com/eduinlight/input-validator/blob/7845c82/src/defaults.ts#L21)
 
 ___
 
 ### setMessages
 
-▸ `Const`**setMessages**(`locale`: *enUS* \| *esES*, `messages`: LocaleType): *void*
+▸ **setMessages**(`locale`, `messages`): `void`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`locale` | *enUS* \| *esES* |
-`messages` | LocaleType |
+| Name | Type |
+| :------ | :------ |
+| `locale` | ``"enUS"`` \| ``"esES"`` |
+| `messages` | `LocaleType` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [defaults.ts:17](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/defaults.ts#L17)
+`void`
+
+#### Defined in
+
+[defaults.ts:17](https://github.com/eduinlight/input-validator/blob/7845c82/src/defaults.ts#L17)
 
 ___
 
 ### validate
 
-▸ `Const`**validate**(`form`: *Record*<string, any\>, `schema`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { `rule`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\> \| [*Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\>]  })[]\>, `options?`: ValidateOptions): IValidationResponse
+▸ **validate**(`form`, `schema`, `options?`): `IValidationResponse`
 
 Returns the average of two numbers.
 
-**`remarks`** 
-This method is part of the {@link core-library#Statistics | Statistics subsystem}.
+**`Remarks`**
 
-**`beta`** 
+This method is part of the core-library#Statistics | Statistics subsystem.
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`form` | *Record*<string, any\> |
-`schema` | *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { `rule`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\> \| [*Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\>]  })[]\> |
-`options?` | ValidateOptions |
+| Name | Type |
+| :------ | :------ |
+| `form` | `DataType` |
+| `schema` | [`SchemaType`](modules.md#schematype) |
+| `options?` | `ValidateOptions` |
 
-**Returns:** IValidationResponse
+#### Returns
+
+`IValidationResponse`
 
 The arithmetic mean of `x` and `y`
 
-Defined in: [validate.ts:63](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/validate.ts#L63)
+#### Defined in
+
+[validate.ts:63](https://github.com/eduinlight/input-validator/blob/7845c82/src/validate.ts#L63)
 
 ___
 
 ### validateAsync
 
-▸ `Const`**validateAsync**(`form`: *Record*<string, any\>, `schema`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { `rule`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\> \| [*Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\>]  })[]\>, `options?`: ValidateOptions): *Promise*<void\>
+▸ **validateAsync**(`form`, `schema`, `options?`): `Promise`<`IValidationResponse`\>
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`form` | *Record*<string, any\> |
-`schema` | *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { `rule`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\> \| [*Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\>]  })[]\> |
-`options?` | ValidateOptions |
+| Name | Type |
+| :------ | :------ |
+| `form` | `DataType` |
+| `schema` | [`SchemaType`](modules.md#schematype) |
+| `options?` | `ValidateOptions` |
 
-**Returns:** *Promise*<void\>
+#### Returns
 
-Defined in: [validateAsync.ts:4](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/validateAsync.ts#L4)
+`Promise`<`IValidationResponse`\>
+
+#### Defined in
+
+[validateAsync.ts:4](https://github.com/eduinlight/input-validator/blob/7845c82/src/validateAsync.ts#L4)
 
 ___
 
 ### validateWithError
 
-▸ `Const`**validateWithError**(`form`: *Record*<string, any\>, `schema`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { `rule`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\> \| [*Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\>]  })[]\>): *boolean*
+▸ **validateWithError**(`form`, `schema`): `boolean`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`form` | *Record*<string, any\> |
-`schema` | *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { `rule`: *Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\> \| [*Record*<string, (*boolean* \| *equals* \| *contains* \| *matches* \| *email* \| *url* \| *ip* \| *alpha* \| *numeric* \| *alphaNumeric* \| *base64* \| *hexadecimal* \| *hexcolor* \| *lowercase* \| *uppercase* \| *int* \| *float* \| *divisibleBy* \| *required* \| *minLength* \| *maxLength* \| *date* \| *afterDate* \| *beforeDate* \| *in* \| *creditCard* \| *json* \| *ascii* \| *locale* \| *currency* \| *mongooseId* \| *minValue* \| *maxValue* \| IObjectRuleType \| { rule: Record<string, ("boolean" \| "equals" \| "contains" \| "matches" \| "email" \| "url" \| "ip" \| "alpha" \| "numeric" \| "alphaNumeric" \| "base64" \| "hexadecimal" \| "hexcolor" \| "lowercase" \| ... 20 more ... \| ...)[]\> \| [...]; })[]\>]  })[]\> |
+| Name | Type |
+| :------ | :------ |
+| `form` | `DataType` |
+| `schema` | [`SchemaType`](modules.md#schematype) |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: [validate_with_error.ts:4](https://github.com/eduinlight/input-validator/blob/8cd5ba9/src/validate_with_error.ts#L4)
+`boolean`
+
+#### Defined in
+
+[validate_with_error.ts:4](https://github.com/eduinlight/input-validator/blob/7845c82/src/validate_with_error.ts#L4)

@@ -1,9 +1,7 @@
 import { IObjectRuleType } from '../types'
 
-const IsUppercase = (message?: string) =>
-  (target: any, key: string) => {
+export const IsUppercase = (message?: string) =>
+  (target: any, key: any) => {
     const current = target[key] || []
     target[key] = [...current, { rule: 'uppercase', ...(message ? { message } : {}) } as IObjectRuleType]
   }
-
-export default IsUppercase

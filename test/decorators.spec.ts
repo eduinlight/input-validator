@@ -1,4 +1,4 @@
-import { Equals, IsAlpha, IsAlphaNumeric, IsBase64, IsBoolean, IsCurrency, IsDate, IsDivisibleBy, IsEmail, IsFloat, IsHexadecimal, IsHexcolor, IsIn, IsInt, IsIP, IsLocale, IsLowercase, IsMaxLength, IsMinLength, IsNumeric, IsRequired, IsUppercase, IsUrl, Matches, MaxValue, MinValue, NestedSchema, ValidationSchema } from '../src/decorators'
+import { Equals, IsAlpha, IsAlphaNumeric, IsBase64, IsBoolean, IsCurrency, IsDate, IsDivisibleBy, IsEmail, IsFloat, IsHexadecimal, IsHexcolor, IsIP, IsIn, IsInt, IsLocale, IsLowercase, IsMaxLength, IsMinLength, IsNumeric, IsRequired, IsUppercase, IsUrl, Matches, MaxValue, MinValue, NestedSchema, ValidationSchema } from '../src/decorators'
 
 describe('test rules functions', () => {
   describe('equals', () => {

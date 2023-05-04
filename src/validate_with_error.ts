@@ -1,7 +1,7 @@
 import { DataType, InputError, SchemaType } from './types'
-import validate from '.'
+import { validate } from './validate'
 
-const validateWithError = (form: DataType, schema: SchemaType): boolean => {
+export const validateWithError = (form: DataType, schema: SchemaType): boolean => {
   const validationResponse = validate(form, schema)
 
   if (!validationResponse.valid) {
@@ -10,5 +10,3 @@ const validateWithError = (form: DataType, schema: SchemaType): boolean => {
 
   return true
 }
-
-export default validateWithError

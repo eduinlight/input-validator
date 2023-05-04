@@ -1,9 +1,7 @@
 import { IObjectRuleType } from '../types'
 
-const IsLowercase = (message?: string) =>
-  (target: any, key: string) => {
+export const IsLowercase = (message?: string) =>
+  (target: any, key: any) => {
     const current = target[key] || []
     target[key] = [...current, { rule: 'lowercase', ...(message ? { message } : {}) } as IObjectRuleType]
   }
-
-export default IsLowercase

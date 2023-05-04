@@ -1,6 +1,6 @@
 import { LocaleType } from '../types'
 
-export default {
+export const esES = {
   equals: 'el texto no es igual a %p1',
   contains: 'el texto tiene que contener %p1',
   matches: 'el texto no coincide con el patrón $p1',

@@ -1,9 +1,7 @@
 import { IObjectRuleType } from '../types'
 
-const IsDivisibleBy = (value: number, message?: string) =>
-  (target: any, key: string) => {
+export const IsDivisibleBy = (value: number, message?: string) =>
+  (target: any, key: any) => {
     const current = target[key] || []
     target[key] = [...current, { rule: 'divisibleBy', params: [value], ...(message ? { message } : {}) } as IObjectRuleType]
   }
-
-export default IsDivisibleBy

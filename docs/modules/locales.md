@@ -13,10 +13,18 @@
 
 ### enUS
 
-• **enUS**: LocaleType
+• `Const` **enUS**: `LocaleType`
+
+#### Defined in
+
+[locals/en_US.ts:3](https://github.com/eduinlight/input-validator/blob/7845c82/src/locals/en_US.ts#L3)
 
 ___
 
 ### esES
 
-• **esES**: LocaleType
+• `Const` **esES**: `LocaleType`
+
+#### Defined in
+
+[locals/es_ES.ts:3](https://github.com/eduinlight/input-validator/blob/7845c82/src/locals/es_ES.ts#L3)
