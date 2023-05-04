@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[locals/en_US.ts:3](https://github.com/eduinlight/input-validator/blob/9ba1dfd/src/locals/en_US.ts#L3)
+[locals/en_US.ts:3](https://github.com/eduinlight/input-validator/blob/7b0c4f6/src/locals/en_US.ts#L3)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[locals/es_ES.ts:3](https://github.com/eduinlight/input-validator/blob/9ba1dfd/src/locals/es_ES.ts#L3)
+[locals/es_ES.ts:3](https://github.com/eduinlight/input-validator/blob/7b0c4f6/src/locals/es_ES.ts#L3)
