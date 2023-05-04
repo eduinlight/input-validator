@@ -1,4 +1,31 @@
-import { Equals, IsAlpha, IsAlphaNumeric, IsBase64, IsBoolean, IsCurrency, IsDate, IsDivisibleBy, IsEmail, IsFloat, IsHexadecimal, IsHexcolor, IsIP, IsIn, IsInt, IsLocale, IsLowercase, IsMaxLength, IsMinLength, IsNumeric, IsRequired, IsUppercase, IsUrl, Matches, MaxValue, MinValue, NestedSchema, ValidationSchema } from '../src/decorators'
+import { Equals } from '../src/decorators/d_equals'
+import { IsAlpha } from '../src/decorators/d_is_alpha'
+import { IsAlphaNumeric } from '../src/decorators/d_is_alpha_numeric'
+import { IsBase64 } from '../src/decorators/d_is_base64'
+import { IsBoolean } from '../src/decorators/d_is_boolean'
+import { IsCurrency } from '../src/decorators/d_is_currency'
+import { IsDate } from '../src/decorators/d_is_date'
+import { IsDivisibleBy } from '../src/decorators/d_is_divisible_by'
+import { IsEmail } from '../src/decorators/d_is_email'
+import { IsFloat } from '../src/decorators/d_is_float'
+import { IsHexadecimal } from '../src/decorators/d_is_hexadecimal'
+import { IsHexcolor } from '../src/decorators/d_is_hexcolor'
+import { IsIn } from '../src/decorators/d_is_in'
+import { IsInt } from '../src/decorators/d_is_int'
+import { IsIP } from '../src/decorators/d_is_ip'
+import { IsLocale } from '../src/decorators/d_is_locale'
+import { IsLowercase } from '../src/decorators/d_is_lowercase'
+import { IsMaxLength } from '../src/decorators/d_is_max_length'
+import { IsMinLength } from '../src/decorators/d_is_min_length'
+import { IsNumeric } from '../src/decorators/d_is_numeric'
+import { IsRequired } from '../src/decorators/d_is_required'
+import { IsUppercase } from '../src/decorators/d_is_uppercase'
+import { IsUrl } from '../src/decorators/d_is_url'
+import { Matches } from '../src/decorators/d_matches'
+import { MaxValue } from '../src/decorators/d_max_value'
+import { MinValue } from '../src/decorators/d_min_value'
+import { NestedSchema } from '../src/decorators/d_nested_schema'
+import { ValidationSchema } from '../src/decorators/d_validation_schema'
 
 describe('test rules functions', () => {
   describe('equals', () => {
@@ -7,10 +34,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @Equals('eduin')
-      name: string;
+        name: string
 
       @Equals('eduin', message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -27,10 +54,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @Matches(/eduin/)
-      name: string;
+        name: string
 
       @Matches(/eduin/, message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -47,10 +74,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsEmail()
-      name: string;
+        name: string
 
       @IsEmail(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -67,10 +94,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsUrl()
-      name: string;
+        name: string
 
       @IsUrl(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -87,10 +114,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsIP()
-      name: string;
+        name: string
 
       @IsIP(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -107,10 +134,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsAlpha()
-      name: string;
+        name: string
 
       @IsAlpha(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -127,10 +154,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsNumeric()
-      name: string;
+        name: string
 
       @IsNumeric(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -147,10 +174,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsAlphaNumeric()
-      name: string;
+        name: string
 
       @IsAlphaNumeric(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -167,10 +194,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsBase64()
-      name: string;
+        name: string
 
       @IsBase64(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -187,10 +214,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsHexadecimal()
-      name: string;
+        name: string
 
       @IsHexadecimal(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -207,10 +234,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsHexcolor()
-      name: string;
+        name: string
 
       @IsHexcolor(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -227,10 +254,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsLowercase()
-      name: string;
+        name: string
 
       @IsLowercase(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -247,10 +274,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsUppercase()
-      name: string;
+        name: string
 
       @IsUppercase(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -267,10 +294,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsInt()
-      name: string;
+        name: string
 
       @IsInt(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -287,10 +314,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsFloat()
-      name: string;
+        name: string
 
       @IsFloat(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -307,10 +334,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsDivisibleBy(4)
-      name: string;
+        name: string
 
       @IsDivisibleBy(4, message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -327,10 +354,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsRequired()
-      name: string;
+        name: string
 
       @IsRequired(message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -347,10 +374,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @MinValue(4)
-      name: string;
+        name: string
 
       @MinValue(4, message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -367,10 +394,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @MaxValue(4)
-      name: string;
+        name: string
 
       @MaxValue(4, message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -387,10 +414,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsMinLength(4)
-      name: string;
+        name: string
 
       @IsMinLength(4, message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -407,10 +434,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsMaxLength(4)
-      name: string;
+        name: string
 
       @IsMaxLength(4, message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -427,10 +454,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsDate()
-      name: string;
+        name: string
 
       @IsDate(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -447,10 +474,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsIn(['1', '2'])
-      name: string;
+        name: string
 
       @IsIn(['1', '2'], message)
-      age: string;
+        age: string
     }
 
     test('check schema', () => {
@@ -467,10 +494,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsBoolean()
-      name: string;
+        name: string
 
       @IsBoolean(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -487,10 +514,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsLocale()
-      name: string;
+        name: string
 
       @IsLocale(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -507,10 +534,10 @@ describe('test rules functions', () => {
     @ValidationSchema()
     class Example {
       @IsCurrency()
-      name: string;
+        name: string
 
       @IsCurrency(message)
-      lastName: string;
+        lastName: string
     }
 
     test('check schema', () => {
@@ -526,16 +553,16 @@ describe('test rules functions', () => {
     class Nested {
       @IsDate()
       @IsRequired()
-      param1: string;
+        param1: string
     }
 
     @ValidationSchema()
     class Example {
       @IsRequired()
-      name: string;
+        name: string
 
       @NestedSchema(Nested)
-      nested: Nested;
+        nested: Nested
     }
 
     test('check schema', () => {

@@ -1,4 +1,6 @@
-import { FieldError, SchemaType, defaults, setLocale, validate } from '../src'
+import { defaults, setLocale } from '../src/defaults'
+import { FieldError, SchemaType } from '../src/types'
+import { validate } from '../src/validate'
 
 describe('changing default locale', () => {
   test('required and email', () => {

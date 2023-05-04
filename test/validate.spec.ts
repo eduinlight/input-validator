@@ -1,6 +1,11 @@
 import { FieldError, SchemaType } from '../src/types'
-import { validate, getMessage } from '../src'
-import { IsInt, IsRequired, MinValue, NestedSchema, ValidationSchema } from '../src/decorators'
+import { validate } from '../src/validate'
+import { getMessage } from '../src/defaults'
+import { ValidationSchema } from '../src/decorators/d_validation_schema'
+import { MinValue } from '../src/decorators/d_min_value'
+import { IsInt } from '../src/decorators/d_is_int'
+import { IsRequired } from '../src/decorators/d_is_required'
+import { NestedSchema } from '../src/decorators/d_nested_schema'
 
 describe('test string rules', () => {
   test('required and email', () => {
@@ -133,20 +138,20 @@ describe('test string rules', () => {
     @ValidationSchema()
     class Author {
       @IsRequired()
-      name: string;
+        name: string
 
       @MinValue(10)
       @IsInt()
-      age: number;
+        age: number
     }
 
     @ValidationSchema()
     class Book {
       @IsRequired()
-      name: string;
+        name: string
 
       @NestedSchema(Author)
-      author: Author
+        author: Author
     }
 
     test('nested decorator', () => {

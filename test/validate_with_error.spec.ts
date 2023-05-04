@@ -1,5 +1,6 @@
+import { defaults } from '../src/defaults'
 import { FieldError, InputError, SchemaType } from '../src/types'
-import { validateWithError, defaults } from '../src'
+import { validateWithError } from '../src/validate_with_error'
 
 describe('test string rules', () => {
   test('required and email', () => {

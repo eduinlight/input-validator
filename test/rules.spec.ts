@@ -1,4 +1,4 @@
-import { rules } from '../src'
+import { rules } from '../src/index'
 
 describe('test rules functions', () => {
   describe('equals', () => {

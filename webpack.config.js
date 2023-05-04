@@ -41,14 +41,14 @@ module.exports = {
   plugins: [
   // DEV PLUGINS
     isProd && new CompressionPlugin({
-      filename: 'index.umd.min.gz',
+      filename: 'index.umd.gz',
       algorithm: 'gzip',
       test: /\.js$/,
       threshold: 10240,
       minRatio: 0.8
     }),
     isProd && new BrotliPlugin({
-      asset: 'index.umd.min.br',
+      asset: 'index.umd.br',
       test: /\.(js|css|html|svg)$/,
       threshold: 10240,
       minRatio: 0.8
