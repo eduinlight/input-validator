@@ -1,6 +1,7 @@
 const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const BrotliPlugin = require('brotli-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -40,9 +41,15 @@ module.exports = {
   plugins: [
   // DEV PLUGINS
     isProd && new CompressionPlugin({
-      filename: '[path].gz[query]',
+      filename: 'index.umd.min.gz',
       algorithm: 'gzip',
       test: /\.js$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }),
+    isProd && new BrotliPlugin({
+      asset: 'index.umd.min.br',
+      test: /\.(js|css|html|svg)$/,
       threshold: 10240,
       minRatio: 0.8
     })
