@@ -9,7 +9,7 @@
 
 This library was written using the [validator](https://www.npmjs.com/package/validator) functions. The main reason why this library come up was for simplicity on input validations.
 
-For more detailed documentation please visit [https://eduinlight.github.io/input-validator](https://eduinlight.github.io/input-validator/).
+For more detailed documentation please visit https://github.com/eduinlight/input-validator/tree/main/docs
 
 ## Install
 
