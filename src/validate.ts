@@ -48,18 +48,6 @@ const parseOptions = (options?: ValidateOptions) => {
   return response
 }
 
-/**
- * Returns the average of two numbers.
- *
- * @remarks
- * This method is part of the {@link core-library#Statistics | Statistics subsystem}.
- *
- * @param x - The first input number
- * @param y - The second input number
- * @returns The arithmetic mean of `x` and `y`
- *
- * @beta
- */
 export const validate = (form: DataType, schema: SchemaType, options?: ValidateOptions): IValidationResponse => {
   const { exact, returnValues } = parseOptions(options)
 
@@ -134,7 +122,7 @@ export const validate = (form: DataType, schema: SchemaType, options?: ValidateO
           throw new Error('array rule has only one param in the form [Schema]')
         }
 
-        // @todo => ADD SUPPORT FOR ARRAY SCHEMA
+        // TODO: ADD SUPPORT FOR ARRAY SCHEMA
       } else if (isNestedRule && typeof form[field] === 'object') {
         const valid = validate(form[field], (rule as {rule: SchemaType}).rule, options)
         if (!valid.valid) {
