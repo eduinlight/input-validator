@@ -1,6 +1,6 @@
 {
   "name": "@eduinlight/input-validator",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "This library is a tool for forms validation and can be used for frontend and backend.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
