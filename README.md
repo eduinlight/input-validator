@@ -17,15 +17,16 @@ npm install @eduinlight/input-validator
 
 ### Browser support
 
-````HTML
+```HTML
 <script src="https://unpkg.com/@eduinlight/input-validator/dist/index.umd.min.js"></script>
-````
+```
 
 ## Usage
 
 ### Defining a Schema
 
-A *Schema* can be defined on the following form: 
+A _Schema_ can be defined on the following form:
+
 ```TS
 const schema = {
   attribute1: Rule[],
@@ -38,47 +39,49 @@ const schema = {
 
 ### Defining a list of Rules
 
-A Rule can be any of the string-check functions of the *validator* library mentioned above:
-  **equals,
-  contains,
-  matches,
-  email,
-  url,
-  ip,
-  alpha,
-  numeric,
-  alphaNumeric,
-  base64,
-  hexadecimal,
-  hexcolor,
-  lowercase,
-  uppercase,
-  int,
-  float,
-  divisibleBy,
-  required,
-  minLength,
-  maxLength,
-  date,
-  afterDate,
-  beforeDate,
-  in,
-  creditCard,
-  json,
-  ascii,
-  boolean,
-  locale,
-  mongooseId,
-  currency**.
+A Rule can be any of the string-check functions of the _validator_ library mentioned above:
+**equals,
+contains,
+matches,
+email,
+url,
+ip,
+alpha,
+numeric,
+alphaNumeric,
+base64,
+hexadecimal,
+hexcolor,
+lowercase,
+uppercase,
+int,
+float,
+divisibleBy,
+required,
+minLength,
+maxLength,
+date,
+afterDate,
+beforeDate,
+in,
+creditCard,
+json,
+ascii,
+boolean,
+locale,
+mongooseId,
+currency**.
 
-A **Rule** can be of tree types, a *string rule* an *object rule* and a *nested schema rule*.
+A **Rule** can be of tree types, a _string rule_ an _object rule_ and a _nested schema rule_.
 
-You can define a list of *string rules* as follow:
+You can define a list of _string rules_ as follow:
+
 ```TS
 const rules = ['required', 'email'....]; // any rule with 0 params
 ```
 
-An *object rule* has the following form:
+An _object rule_ has the following form:
+
 ```
 const objRule = {
   rule: Rule, // any mentioned above rules
@@ -87,7 +90,8 @@ const objRule = {
 }
 ```
 
-A *nested schema rule* has the following form:
+A _nested schema rule_ has the following form:
+
 ```
 const objRule = {
   rule: Schema, // here you can use a nested schema to test child objects
@@ -95,11 +99,12 @@ const objRule = {
 ```
 
 ### Full schema example
+
 ```TS
 const schema = {
   name: ['required'],
   email: ['required', 'email'],
-  age: ['required', 'int', {rule: 'min', param: [20]}],
+  age: ['required', 'int', {rule: 'min', params: [20]}],
   professional: [
     'required',
     {
@@ -113,15 +118,16 @@ const schema = {
 ```
 
 ## Defining a schema using decorators
+
 This library fully support the use of decorators. The declaration list is in reverse order of declaration. Please see the next example:
 
 ```TS
-import { 
-  IsInt, 
-  IsRequired, 
-  MinValue, 
-  NestedSchema, 
-  ValidationSchema 
+import {
+  IsInt,
+  IsRequired,
+  MinValue,
+  NestedSchema,
+  ValidationSchema
 } from '@eduinlight/input-validator/dist/decorators'
 
 @ValidationSchema() //use this special decorator to generate a schema of your class
@@ -147,6 +153,7 @@ class Book {
 ## Validate
 
 First you need to import the validate function.
+
 ```TS
 import {validate} from '@eduinlight/input-validator'
 ```
@@ -176,7 +183,7 @@ if(response.valid) {
 
 ```TS
 {
-  // default to true 
+  // default to true
   // verify if the form has no other attributes than the ones specified in the schema
   exact?: boolean,
   // default to false
@@ -186,6 +193,7 @@ if(response.valid) {
 ```
 
 ### Validate using a Decorated Schema
+
 ```TS
 const form = {
   name: 'cuba',
@@ -199,6 +207,7 @@ const valid = validate(form, Book)
 ```
 
 ### Errors
+
 Errors are described recursively as follow:
 
 ```TS
@@ -218,6 +227,7 @@ $ npm run test
 - [eduinlight](https://github.com/eduinlight) - **Eduin Garcia Cordero** (author)
 
 ## License (MIT)
+
 ```
 Copyright (c) 2018 Chris O'Hara <cohara87@gmail.com>
 
