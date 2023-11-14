@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[types.ts:27](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/types.ts#L27)
+[types.ts:27](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/types.ts#L27)
 
 ## Properties
 
@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[types.ts:25](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/types.ts#L25)
+[types.ts:25](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/types.ts#L25)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[types.ts:23](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/types.ts#L23)
+[types.ts:23](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/types.ts#L23)

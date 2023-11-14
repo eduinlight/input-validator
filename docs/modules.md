@@ -274,7 +274,7 @@ Re-exports [url](modules/rules.md#url)
 
 #### Defined in
 
-[types.ts:20](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/types.ts#L20)
+[types.ts:20](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/types.ts#L20)
 
 ## Variables
 
@@ -292,7 +292,7 @@ Re-exports [url](modules/rules.md#url)
 
 #### Defined in
 
-[defaults.ts:5](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/defaults.ts#L5)
+[defaults.ts:5](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/defaults.ts#L5)
 
 ## Functions
 
@@ -312,7 +312,7 @@ Re-exports [url](modules/rules.md#url)
 
 #### Defined in
 
-[errors_array_to_object.ts:3](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/errors_array_to_object.ts#L3)
+[errors_array_to_object.ts:3](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/errors_array_to_object.ts#L3)
 
 ___
 
@@ -332,7 +332,7 @@ ___
 
 #### Defined in
 
-[defaults.ts:13](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/defaults.ts#L13)
+[defaults.ts:13](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/defaults.ts#L13)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[defaults.ts:11](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/defaults.ts#L11)
+[defaults.ts:11](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/defaults.ts#L11)
 
 ___
 
@@ -372,7 +372,7 @@ ___
 
 #### Defined in
 
-[defaults.ts:21](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/defaults.ts#L21)
+[defaults.ts:21](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/defaults.ts#L21)
 
 ___
 
@@ -393,19 +393,13 @@ ___
 
 #### Defined in
 
-[defaults.ts:17](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/defaults.ts#L17)
+[defaults.ts:17](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/defaults.ts#L17)
 
 ___
 
 ### validate
 
 ▸ **validate**(`form`, `schema`, `options?`): `IValidationResponse`
-
-Returns the average of two numbers.
-
-**`Remarks`**
-
-This method is part of the core-library#Statistics | Statistics subsystem.
 
 #### Parameters
 
@@ -419,11 +413,9 @@ This method is part of the core-library#Statistics | Statistics subsystem.
 
 `IValidationResponse`
 
-The arithmetic mean of `x` and `y`
-
 #### Defined in
 
-[validate.ts:63](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/validate.ts#L63)
+[validate.ts:51](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/validate.ts#L51)
 
 ___
 
@@ -445,7 +437,7 @@ ___
 
 #### Defined in
 
-[validateAsync.ts:4](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/validateAsync.ts#L4)
+[validateAsync.ts:4](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/validateAsync.ts#L4)
 
 ___
 
@@ -466,4 +458,4 @@ ___
 
 #### Defined in
 
-[validate_with_error.ts:4](https://github.com/eduinlight/input-validator/blob/9c28dc2/src/validate_with_error.ts#L4)
+[validate_with_error.ts:4](https://github.com/eduinlight/input-validator/blob/e7fc9bf/src/validate_with_error.ts#L4)
